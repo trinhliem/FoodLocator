@@ -1,27 +1,40 @@
-import banner from './assets/banner.jpg'; // adjust the path if needed
-import './index.css'; // make sure your CSS is imported
+import React from 'react';
+import Card from './components/Card';
 
-function App() {
+export default function App() {
+  const cardsData = [
+    {
+      title: 'Millennium Park',
+      text: 'Explore the famous Cloud Gate sculpture.',
+      image: 'https://example.com/cloud-gate.jpg'
+    },
+    {
+      title: 'Navy Pier',
+      text: 'Enjoy attractions, restaurants, and lake views.',
+      image: 'https://example.com/navy-pier.jpg'
+    },
+    {
+      title: 'Art Institute',
+      text: 'Discover masterpieces from around the world.',
+      image: 'https://example.com/art-institute.jpg'
+    }
+  ];
+
   return (
-    <>
-      <section
-        className="parallax"
-        style={{ backgroundImage: `url(${banner})` }}
-      >
-        <div className="overlay">
-          <h1>Welcome to Chicago</h1>
-          <p>Your adventure starts here</p>
-        </div>
-      </section>
-
-      <main>
-        <section style={{ padding: '2rem', textAlign: 'center' }}>
-          <h2>Explore the City</h2>
-          <p>Scroll down to discover more about Chicago’s best spots.</p>
-        </section>
-      </main>
-    </>
+    <div style={styles.layout}>
+      {cardsData.map((card, index) => (
+        <Card key={index} {...card} />
+      ))}
+    </div>
   );
 }
 
-export default App;
+const styles = {
+  layout: {
+    display: 'flex',
+    gap: '1rem',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    padding: '2rem'
+  }
+};
