@@ -33,7 +33,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='./assets/walkthrough.gif' width='' alt='Video Walkthrough' />
+<img src='./public/assets/walkthrough.gif' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with LICEcap
@@ -44,7 +44,7 @@ GIF created with LICEcap
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Challenges include arranging cards in a tidy manner, creating the banner and figuring out scrolling.
 
 ## License
 
